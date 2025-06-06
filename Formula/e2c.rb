@@ -10,7 +10,7 @@ class E2c < Formula
 
   on_macos do
     url "https://github.com/nlamirault/e2c/releases/download/v0.1.0/e2c_darwin_all"
-    sha256 "e88623d366ec8e42fcf7c3dc9148c82f7af49e4dc47fb966c0a9e5743abe3d20"
+    sha256 "a22c74c0929c6fa342edbe5204a1f68fcbcc650eefa040c56e43a57a89dca241"
 
     def install
       bin.install "e2c_darwin_all" => "e2c"
@@ -20,14 +20,14 @@ class E2c < Formula
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
       url "https://github.com/nlamirault/e2c/releases/download/v0.1.0/e2c_linux_amd64"
-      sha256 "9c29b6181f9857309b9e6a4392d184735eac75280e502540da0b55a64c4c1ee9"
+      sha256 "37dcd1b3bc57c36bf2cc8059e24966114409c38247be0cce7cbd6edb1e752ff5"
       def install
         bin.install "e2c_linux_amd64" => "e2c"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
       url "https://github.com/nlamirault/e2c/releases/download/v0.1.0/e2c_linux_arm64"
-      sha256 "ce35d588f29e51da0405c4589acaea0390a69e3a5003fb3abbff9e1fa40751f2"
+      sha256 "0618f4965ced64f415d2f348e1f8437b2803dd0d5bd5539f35cf0194f2e5d866"
       def install
         bin.install "e2c_linux_arm64" => "e2c"
       end
