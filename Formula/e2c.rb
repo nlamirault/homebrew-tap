@@ -9,27 +9,27 @@ class E2c < Formula
   license "Apache v2"
 
   on_macos do
-    url "https://github.com/nlamirault/e2c/releases/download/v0.1.0/e2c_Darwin_all.tar.gz"
-    sha256 "a07312063408931481b13d4590cc57a6d56095bcb735b63478b414e27c20fac1"
+    url "https://github.com/nlamirault/e2c/releases/download/v0.1.0/e2c_darwin_all"
+    sha256 "e88623d366ec8e42fcf7c3dc9148c82f7af49e4dc47fb966c0a9e5743abe3d20"
 
     def install
-      bin.install "e2c"
+      bin.install "e2c_darwin_all" => "e2c"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/nlamirault/e2c/releases/download/v0.1.0/e2c_Linux_x86_64.tar.gz"
-      sha256 "3f269cf83be23527fa9d91a20cb6d0f8b8a1671c9acfdde24cb7455358a9be2a"
+      url "https://github.com/nlamirault/e2c/releases/download/v0.1.0/e2c_linux_amd64"
+      sha256 "9c29b6181f9857309b9e6a4392d184735eac75280e502540da0b55a64c4c1ee9"
       def install
-        bin.install "e2c"
+        bin.install "e2c_linux_amd64" => "e2c"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/nlamirault/e2c/releases/download/v0.1.0/e2c_Linux_arm64.tar.gz"
-      sha256 "61d5608d1dd0089e4ce8ffdc3d7737ed1f05f37d772528bccb23502c95c746a7"
+      url "https://github.com/nlamirault/e2c/releases/download/v0.1.0/e2c_linux_arm64"
+      sha256 "ce35d588f29e51da0405c4589acaea0390a69e3a5003fb3abbff9e1fa40751f2"
       def install
-        bin.install "e2c"
+        bin.install "e2c_linux_arm64" => "e2c"
       end
     end
   end
