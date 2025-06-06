@@ -5,29 +5,39 @@
 class E2c < Formula
   desc "e2c is AWS EC2 Terminal UI Manager. Inspired by k9s and e1s."
   homepage "https://github.com/nlamirault/e2c"
-  version "0.1.0"
+  version "0.1.1"
   license "Apache v2"
 
   on_macos do
-    url "https://github.com/nlamirault/e2c/releases/download/v0.1.0/e2c_darwin_all"
-    sha256 "6d96b8f0c0df1a217853599809588ed737f0ca15ed7b4ec3870c84a19d8b5412"
+    if Hardware::CPU.intel?
+      url "https://github.com/nlamirault/e2c/releases/download/v0.1.1/e2c_darwin_amd64"
+      sha256 "b76e67c520f3b9630ff4ad814fc684ec22ef7e1175e3acda4bc9218d8eb67bac"
 
-    def install
-      bin.install "e2c_darwin_all" => "e2c"
+      def install
+        bin.install "e2c_darwin_amd64" => "e2c"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/nlamirault/e2c/releases/download/v0.1.1/e2c_darwin_arm64"
+      sha256 "7bef15b5fc71fd5adaef602406776d241fa393344e962564d3b3b057aadea46f"
+
+      def install
+        bin.install "e2c_darwin_arm64" => "e2c"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/nlamirault/e2c/releases/download/v0.1.0/e2c_linux_amd64"
-      sha256 "2062473a351b08073e5bd57e1a9113ba1e6af564bde30ce6ae64798cd3cf920b"
+      url "https://github.com/nlamirault/e2c/releases/download/v0.1.1/e2c_linux_amd64"
+      sha256 "f807f54e04a5f48770117ad8f952ad8e4cb06c3b12ea31dd3487e279a8cb163e"
       def install
         bin.install "e2c_linux_amd64" => "e2c"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/nlamirault/e2c/releases/download/v0.1.0/e2c_linux_arm64"
-      sha256 "39db06b8513742a885b7b28d97c7451faf13d02913a6fa22167fc0ddb4053a92"
+      url "https://github.com/nlamirault/e2c/releases/download/v0.1.1/e2c_linux_arm64"
+      sha256 "4b8b06295ec03b566cade161a2edf4675f39a08e5e750f221d7f35417ce2c71d"
       def install
         bin.install "e2c_linux_arm64" => "e2c"
       end
