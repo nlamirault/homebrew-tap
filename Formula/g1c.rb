@@ -5,33 +5,33 @@
 class G1c < Formula
   desc "g1c is Google Cloud Instances Terminal UI Manager. Inspired by k9s and e1s."
   homepage "https://github.com/nlamirault/g1c"
-  version "0.1.16"
+  version "0.1.17"
   license "Apache v2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/nlamirault/g1c/releases/download/v0.1.16/g1c_darwin_arm64_v0.1.16"
-      sha256 "d298d91a9d2bece2a21d25da01a665e8c9f40718a19f33a0bc5e2cafd664fc75"
+      url "https://github.com/nlamirault/g1c/releases/download/v0.1.17/g1c_darwin_arm64_v0.1.17"
+      sha256 "01af468a06b57edfd10fb962aa11f460e8b6bbb3d51e897585729951551eb3ef"
 
       def install
-        bin.install "g1c_darwin_arm64_v0.1.16" => "g1c"
+        bin.install "g1c_darwin_arm64_v0.1.17" => "g1c"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/nlamirault/g1c/releases/download/v0.1.16/g1c_linux_amd64_v0.1.16"
-      sha256 "c9d1f1e7fa2d60dd5d6b38c33814db49110545cb4acd08adead393a617676281"
+      url "https://github.com/nlamirault/g1c/releases/download/v0.1.17/g1c_linux_amd64_v0.1.17"
+      sha256 "6e0443e39ab7f124f16b625d4da9ac06934050432a1b742ee0c72e96aec91e2a"
       def install
-        bin.install "g1c_linux_amd64_v0.1.16" => "g1c"
+        bin.install "g1c_linux_amd64_v0.1.17" => "g1c"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/nlamirault/g1c/releases/download/v0.1.16/g1c_linux_arm64_v0.1.16"
-      sha256 "51a324584ebf87598e49790e072e4dbc075cb18413c2c27fb3aba4e1bc24f564"
+      url "https://github.com/nlamirault/g1c/releases/download/v0.1.17/g1c_linux_arm64_v0.1.17"
+      sha256 "d7218414a44127d59f90986d544cf503982ba4e8d10bfd85602c94f6597a906c"
       def install
-        bin.install "g1c_linux_arm64_v0.1.16" => "g1c"
+        bin.install "g1c_linux_arm64_v0.1.17" => "g1c"
       end
     end
   end
