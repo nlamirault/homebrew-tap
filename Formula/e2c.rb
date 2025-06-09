@@ -5,41 +5,41 @@
 class E2c < Formula
   desc "e2c is AWS EC2 Terminal UI Manager. Inspired by k9s and e1s."
   homepage "https://github.com/nlamirault/e2c"
-  version "0.1.10"
+  version "0.1.11"
   license "Apache v2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nlamirault/e2c/releases/download/v0.1.10/e2c_darwin_amd64_v0.1.10"
-      sha256 "3748a7840dd2b7320c14b3b3a387c0f69ad69e40a8f25777dd5c93592aff8aa2"
+      url "https://github.com/nlamirault/e2c/releases/download/v0.1.11/e2c_darwin_amd64_v0.1.11"
+      sha256 "5991e097417c7380fcfd94b59c45834fd8e17df3bd0c34294a13f84af84f17c0"
 
       def install
-        bin.install "e2c_darwin_amd64_v0.1.10" => "e2c"
+        bin.install "e2c_darwin_amd64_v0.1.11" => "e2c"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nlamirault/e2c/releases/download/v0.1.10/e2c_darwin_arm64_v0.1.10"
-      sha256 "85074ffd3d0076ffe762d0a52b54d7b30968046cac7b06d4fbaef6db2f4ed234"
+      url "https://github.com/nlamirault/e2c/releases/download/v0.1.11/e2c_darwin_arm64_v0.1.11"
+      sha256 "89c231439d11d601587395846fee53ab3ec969281c85be44f00d17237b6e626f"
 
       def install
-        bin.install "e2c_darwin_arm64_v0.1.10" => "e2c"
+        bin.install "e2c_darwin_arm64_v0.1.11" => "e2c"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/nlamirault/e2c/releases/download/v0.1.10/e2c_linux_amd64_v0.1.10"
-      sha256 "1e5a320e853218ca9dcbd6fac7b5372fc4a69ee7262a944c24bc4b9cc03b0239"
+      url "https://github.com/nlamirault/e2c/releases/download/v0.1.11/e2c_linux_amd64_v0.1.11"
+      sha256 "ab801a9c8ca5ed7a21ba9011b998034a3d83b8533949fd6f1cd4e6f1c6fc2fe8"
       def install
-        bin.install "e2c_linux_amd64_v0.1.10" => "e2c"
+        bin.install "e2c_linux_amd64_v0.1.11" => "e2c"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/nlamirault/e2c/releases/download/v0.1.10/e2c_linux_arm64_v0.1.10"
-      sha256 "7495eae50838b2b364718d3db19100307b200763fa9e4b46d94a2ad3ba742db4"
+      url "https://github.com/nlamirault/e2c/releases/download/v0.1.11/e2c_linux_arm64_v0.1.11"
+      sha256 "1743c76156a2850b88cadf6ae62acc84c80182a268da37e476b35cf9b66f996f"
       def install
-        bin.install "e2c_linux_arm64_v0.1.10" => "e2c"
+        bin.install "e2c_linux_arm64_v0.1.11" => "e2c"
       end
     end
   end
