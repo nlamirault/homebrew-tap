@@ -5,33 +5,33 @@
 class G1c < Formula
   desc "g1c is Google Cloud Instances Terminal UI Manager. Inspired by k9s and e1s."
   homepage "https://github.com/nlamirault/g1c"
-  version "0.1.15"
+  version "0.1.16"
   license "Apache v2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/nlamirault/g1c/releases/download/v0.1.15/g1c_darwin_arm64_v0.1.15"
+      url "https://github.com/nlamirault/g1c/releases/download/v0.1.16/g1c_darwin_arm64_v0.1.16"
       sha256 "d298d91a9d2bece2a21d25da01a665e8c9f40718a19f33a0bc5e2cafd664fc75"
 
       def install
-        bin.install "g1c_darwin_arm64_v0.1.15" => "g1c"
+        bin.install "g1c_darwin_arm64_v0.1.16" => "g1c"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/nlamirault/g1c/releases/download/v0.1.15/g1c_linux_amd64_v0.1.15"
+      url "https://github.com/nlamirault/g1c/releases/download/v0.1.16/g1c_linux_amd64_v0.1.16"
       sha256 "c9d1f1e7fa2d60dd5d6b38c33814db49110545cb4acd08adead393a617676281"
       def install
-        bin.install "g1c_linux_amd64_v0.1.15" => "g1c"
+        bin.install "g1c_linux_amd64_v0.1.16" => "g1c"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/nlamirault/g1c/releases/download/v0.1.15/g1c_linux_arm64_v0.1.15"
+      url "https://github.com/nlamirault/g1c/releases/download/v0.1.16/g1c_linux_arm64_v0.1.16"
       sha256 "51a324584ebf87598e49790e072e4dbc075cb18413c2c27fb3aba4e1bc24f564"
       def install
-        bin.install "g1c_linux_arm64_v0.1.15" => "g1c"
+        bin.install "g1c_linux_arm64_v0.1.16" => "g1c"
       end
     end
   end
